@@ -1,0 +1,25 @@
+//How to multiply a number by 10 without multiplication operator//Using Bit shifting Operator
+//Author : Krishank S. Mehta
+//Date   : 1/13/2017
+//Time   : 2:21 AM
+
+
+#include<iostream>
+
+using namespace std;
+
+
+int multiply(int num)
+{
+    int answer;
+    answer=(num<<1) + (num<<3);
+    return answer;
+}
+
+int main ()
+{
+    int num;
+    cout<<"Please Enter the Number :";
+    cin>>num;
+    cout<<"The Answer is: "<<multiply(num)<<endl;
+}
