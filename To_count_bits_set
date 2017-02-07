@@ -1,0 +1,24 @@
+//To count no of bits set
+//Author : Krishak S. Mehta
+//Date   : 2/7/2017
+//Time   : 4:08 AM 
+#include<iostream>
+
+using namespace std;
+
+int main()
+
+{
+    cout<<" Enter the number ";
+    int num;
+    cin>>num;
+    int count=0;
+    for(int i=0;i<32;i++)
+    {
+        if(num&(1<<i))
+        {
+            ++count;
+        }
+    }
+    cout<<count;
+}
