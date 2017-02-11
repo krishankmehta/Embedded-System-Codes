@@ -1,0 +1,30 @@
+//To find number of bits required to change Number A to B
+//Author  : Krishank S. Mehta
+//Date    : 2/11/2017
+//Time    : 12:30 AM
+
+
+#include<iostream>
+
+using namespace std;
+
+int main()
+{
+    int a,b;
+    cout<<"Enter the first number A:";
+    cin>>a;
+    cout<<"Enter the second number B:";
+    cin>>b;
+    int temp=1;
+    int count=0;
+    for(int i=0;i<sizeof(int);i++)
+    {
+        if((a&temp)!=(b&temp))
+        {
+            count+=1;
+            
+        }
+        temp=(temp<<1);
+    }
+    cout<<"The number of bits to be changed in order to change number A to b is"<<" "<<count<<endl;
+}
