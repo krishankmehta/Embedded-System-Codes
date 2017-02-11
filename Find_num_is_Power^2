@@ -1,0 +1,37 @@
+//To find whether a given number is a power of 2
+//Author : Krishank S. Mehta
+//Date: 2/10/2017
+//Time: 11:13 PM
+
+
+#include<iostream>
+
+using namespace std;
+
+
+bool power_two(int num)
+{
+    
+    if(num==0)
+    {
+        return 0;
+    }
+    while(num!=1)
+    {
+        if(num%2!=0)
+        {
+            return 0;
+        }
+        num=num/2;
+    }
+    return 1;
+}
+
+
+int main()
+{
+    int number;
+    cout<<"Enter the number to check whether it is a power of two :";
+    cin>>number;
+    power_two(number) ? cout<<"Yes"<<endl : cout<<"No"<<endl;
+}
