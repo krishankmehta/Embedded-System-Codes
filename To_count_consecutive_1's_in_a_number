@@ -1,0 +1,42 @@
+//To find the number of consecutive 1's in a number
+//Author : Krishank S. Mehta
+//Date   : 3/3/2017
+//Time   : 11:15 PM
+
+
+#include<iostream>
+#include<vector>
+
+using namespace std;
+
+int main()
+{
+
+    cout<<"Enter the number of which the number of consecutive 1's are to be calculated"<<endl;
+    int number;
+    cin>>number;
+    int temp,count=0;
+    vector <int> x;
+    for(int i=0; i<sizeof(number)*8; i++)
+    {
+        temp=number;
+        if(temp&(1<<i))
+        {
+            ++count;
+        }
+        else
+        {
+            x.push_back(count);
+            count=0;
+        }
+    }
+    int max=0;
+    for(int i=0; i<x.size(); i++)
+    {
+        if(x[i]>max)
+        {
+            max=x[i];
+        }
+    }
+    cout<<max<<endl;
+}
