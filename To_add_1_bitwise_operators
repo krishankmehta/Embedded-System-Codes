@@ -1,0 +1,26 @@
+//To add 1 using bitwise operators
+
+
+
+
+
+#include<iostream>
+
+using namespace std;
+
+
+int main()
+{
+
+
+int num =1;
+int num1=1;
+if(num1&num)
+{
+   cout<<(num^0x00000003);
+}
+else
+{
+    cout<<(num1^0x00000001);
+}
+}
