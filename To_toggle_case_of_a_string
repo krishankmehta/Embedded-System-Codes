@@ -1,0 +1,18 @@
+//To toggle case of a string
+
+
+
+
+
+#include<iostream>
+using namespace std;
+
+int main()
+{
+    string x = "GodIsGreaT";
+    for(int i=0;i<x.length();i++)
+    {
+    cout<<char(x[i]^32);
+    }
+    cout<<x.length();
+}
