@@ -1,0 +1,28 @@
+//To implement memcpy
+
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+
+void my_memcpy(void *dest,void* src,int size)
+{
+    
+    char *cdest = (char*)dest;
+    char* csrc = (char*)src;
+    for(int i=0;i<size+1;i++)
+    {
+        cdest[i]  = csrc[i];
+    }
+}
+
+
+int main()
+{
+    char src[] = "Krishank S. Mehta";
+    char dest[100];
+    my_memcpy(dest,src,strlen(src));
+    printf("%s",dest);
+}
