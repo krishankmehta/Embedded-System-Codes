@@ -1,0 +1,36 @@
+//To implement memmove
+
+
+
+
+
+#include<stdio.h>
+#include<string.h>
+
+void my_memmove(void *dest,void* src,int size)
+{
+    
+    char *cdest = (char*)dest;
+    char* csrc = (char*)src;
+    
+    char * temp = malloc(sizeof(char)*size);
+    for(int i=0;i<size+1;i++)
+    {
+        temp[i] = csrc[i];
+    }
+    for(int i=0;i<size+1;i++)
+    {
+         cdest[i]  = temp[i];
+    }
+    
+    free(temp);
+}
+
+
+int main()
+{
+    char src[] = "Krishank S. Mehta";
+    char dest[100];
+    my_memmove(src+5,src,strlen(src));
+    printf("%s",src);
+}
