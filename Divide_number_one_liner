@@ -1,0 +1,21 @@
+//To divide a number in one liner
+
+
+#include<stdio.h>
+
+
+
+int main()
+{
+    int num = 641;
+    int result = num>>6;
+    printf("%d",result);
+    int quotient;
+    while(num>=64)
+    {
+        num -=64;
+        ++quotient;
+    }
+    printf("%d",quotient);
+    
+}
